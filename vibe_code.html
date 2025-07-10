@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding: Your Quick Start</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Color Palette: Energetic & Playful -->
+    <!-- NEITHER Mermaid JS NOR SVG were used in this file. All diagrams use HTML and Tailwind CSS. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAFA; /* Light Gray */
+            color: #212121; /* Dark Gray */
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #00A6FB, #0CF574); /* Blue to Green */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 0.75rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            padding: 1.5rem; /* p-6 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        .flow-step {
+            background-color: #FFFFFF;
+            border-radius: 0.75rem; /* rounded-lg */
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.06); /* shadow-sm */
+            padding: 1rem;
+            text-align: center;
+            flex-shrink: 0;
+            width: 180px; /* Fixed width for flow steps */
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #00A6FB; /* Blue */
+            line-height: 1;
+            margin: 0 0.5rem;
+        }
+        .warning-box {
+            background-color: #FEE2E2; /* Red-100 */
+            color: #EF4444; /* Red-500 */
+            border-left: 4px solid #EF4444;
+            padding: 1rem;
+            border-radius: 0.375rem; /* rounded-md */
+            font-weight: 500; /* font-medium */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-3">
+                <span class="gradient-text">Level Up Your Ideas:</span>
+            </h1>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                A Quick Start to Vibe Coding!
+            </h2>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-600">
+                Feeling the AI buzz but stuck on the sidelines? Got a project idea you wish you could build *before breakfast*? Vibe coding is your answer!
+            </p>
+        </header>
+
+        <section id="what-is-it" class="mb-16">
+            <div class="card text-center">
+                <h3 class="text-2xl font-bold mb-3">What is Vibe Coding?</h3>
+                <p class="text-gray-700 max-w-2xl mx-auto">
+                    It's about leveraging AI to rapidly generate code using plain language. Think of it as having an ultra-fast assistant that helps you transform ideas into functional prototypes, without getting bogged down in tedious syntax.
+                </p>
+                <div class="text-5xl mt-6">🤖💬💻</div>
+            </div>
+        </section>
+
+        <section id="why-love-it" class="mb-16">
+            <h3 class="text-2xl font-bold text-center mb-8">Why You'll Love It:</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card flex flex-col items-center text-center p-4">
+                    <div class="text-4xl mb-3">⚡</div>
+                    <h4 class="font-semibold text-lg text-[#00A6FB]">Rapid Prototyping</h4>
+                    <p class="text-gray-600 text-sm">Validate ideas in record time. Fail fast, learn cheap, iterate quicker.</p>
+                </div>
+                <div class="card flex flex-col items-center text-center p-4">
+                    <div class="text-4xl mb-3">🚀</div>
+                    <h4 class="font-semibold text-lg text-[#0CF574]">Unleash Productivity</h4>
+                    <p class="text-gray-600 text-sm">Bring personal projects to life or explore features with unprecedented speed.</p>
+                </div>
+                <div class="card flex flex-col items-center text-center p-4">
+                    <div class="text-4xl mb-3">🎓</div>
+                    <h4 class="font-semibold text-lg text-[#F9F871]">Accelerated Learning</h4>
+                    <p class="text-gray-600 text-sm">Dabble with new tech, get instant examples, and understand complex concepts.</p>
+                </div>
+                <div class="card flex flex-col items-center text-center p-4">
+                    <div class="text-4xl mb-3">🔓</div>
+                    <h4 class="font-semibold text-lg text-[#F34213]">Lower Barrier to Entry</h4>
+                    <p class="text-gray-600 text-sm">No complex setup. Jump straight into creating, even if you're new to a tech stack.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-started" class="mb-16">
+            <h3 class="text-2xl font-bold text-center mb-8">Your "Easy Button" to Get Started:</h3>
+            <p class="text-center text-gray-700 max-w-2xl mx-auto mb-8">
+                The quickest path into vibe coding is through **free web chat interfaces** like ChatGPT or Gemini. No installation needed!
+            </p>
+
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 overflow-x-auto pb-4">
+                <div class="flow-step">
+                    <div class="text-3xl mb-2">💡</div>
+                    <p class="font-bold">1. Start with Your Idea</p>
+                    <p class="text-gray-600 text-sm">What do you want to build? A script, a feature, a small app?</p>
+                </div>
+                <div class="flow-arrow md:block hidden">&rarr;</div>
+                <div class="flow-arrow md:hidden block">&darr;</div>
+
+                <div class="flow-step">
+                    <div class="text-3xl mb-2">📝</div>
+                    <p class="font-bold">2. Craft Your "Mini-PRD"</p>
+                    <p class="text-gray-600 text-sm">Define your goal & what success looks like. (e.g., "Script reads CSV, calculates average.")</p>
+                </div>
+                <div class="flow-arrow md:block hidden">&rarr;</div>
+                <div class="flow-arrow md:hidden block">&darr;</div>
+
+                <div class="flow-step">
+                    <div class="text-3xl mb-2">🗣️</div>
+                    <p class="font-bold">3. Prompt the AI</p>
+                    <p class="text-gray-600 text-sm">Copy-paste your Mini-PRD into the web chat. Specify language!</p>
+                </div>
+                <div class="flow-arrow md:block hidden">&rarr;</div>
+                <div class="flow-arrow md:hidden block">&darr;</div>
+
+                <div class="flow-step">
+                    <div class="text-3xl mb-2">✂️📋</div>
+                    <p class="font-bold">4. Copy, Paste, & Polish</p>
+                    <p class="text-gray-600 text-sm">Get the code, put it in your environment, and make small tweaks.</p>
+                </div>
+            </div>
+
+            <div class="warning-box mt-8 max-w-2xl mx-auto">
+                <p class="font-bold">🚨 CRITICAL WARNING:</p>
+                <p>NEVER paste sensitive or proprietary organizational data into public AI models. Always sanitize your inputs or use dummy data.</p>
+            </div>
+        </section>
+
+        <section id="throwaway-code" class="mb-16">
+            <div class="card text-center">
+                <h3 class="text-2xl font-bold mb-3">The Power of "Throwaway Code"</h3>
+                <p class="text-gray-700 max-w-2xl mx-auto">
+                    Initial vibe-coded prototypes might be "thrown away once validated." This isn't wasted effort; it's a strategic engineering practice that allows you to rapidly confirm an idea's feasibility before investing heavily in production solutions. You learn faster, cheaper, and with less risk!
+                </p>
+                <div class="text-5xl mt-6">♻️💡</div>
+            </div>
+        </section>
+
+        <section id="call-to-action" class="text-center mb-12">
+            <h3 class="text-3xl font-bold mb-6">Ready to Transform Your Ideas?</h3>
+            <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+                Pick that side project you've always dreamed of, or a small feature you've wanted to explore. Define your mini-PRD, prompt the AI, and watch your ideas come to life!
+            </p>
+        </section>
+    </main>
+</body>
+</html>
