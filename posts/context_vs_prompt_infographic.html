@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Context vs Prompt Engineering - Interactive Infographic</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 900px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    .partnership-visual {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 3rem 0;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .engineering-box {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(38, 208, 124, 0.3);
+      border-radius: 20px;
+      padding: 2rem;
+      width: 300px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      animation: fadeInLeft 1s ease-out 0.6s both;
+    }
+
+    .engineering-box:nth-child(3) {
+      animation: fadeInRight 1s ease-out 0.6s both;
+    }
+
+    .engineering-box:hover {
+      transform: translateY(-10px) scale(1.05);
+      background: rgba(38, 208, 124, 0.1);
+      box-shadow: 0 20px 40px rgba(38, 208, 124, 0.2);
+      border-color: #26d07c;
+    }
+
+    .engineering-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .engineering-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #26d07c;
+    }
+
+    .engineering-desc {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .plus-icon {
+      font-size: 3rem;
+      animation: pulse 2s infinite;
+      color: #26d07c;
+    }
+
+    .key-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .point-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(38, 208, 124, 0.2);
+      border-radius: 15px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      animation: fadeInUp 1s ease-out calc(0.9s + var(--delay)) both;
+    }
+
+    .point-card:hover {
+      transform: translateY(-5px);
+      background: rgba(38, 208, 124, 0.08);
+      border-color: #26d07c;
+      box-shadow: 0 10px 30px rgba(38, 208, 124, 0.1);
+    }
+
+    .point-number {
+      background: #26d07c;
+      color: #000;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .point-card h4 {
+      color: #26d07c;
+      margin-bottom: 0.5rem;
+    }
+
+    .bottom-line {
+      background: rgba(38, 208, 124, 0.1);
+      border: 2px solid #26d07c;
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 3rem 0;
+      animation: fadeInUp 1s ease-out 1.5s both;
+    }
+
+    .bottom-line h3 {
+      color: #26d07c;
+      margin-bottom: 1rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(45deg, #26d07c, #1fa866);
+      color: #000;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      margin-top: 2rem;
+      animation: fadeInUp 1s ease-out 1.8s both;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(38, 208, 124, 0.3);
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    @media (max-width: 768px) {
+      .partnership-visual { flex-direction: column; }
+      .engineering-box { width: 100%; max-width: 300px; }
+      .title { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Context Engineering ≠ Death of Prompt Engineering</h1>
+    <p class="subtitle">They're best friends, not foes!</p>
+
+    <a href="context_vs_prompt.html" class="cta-button">
+      📖 If you prefer words
+    </a>
+
+    <div class="partnership-visual">
+      <div class="engineering-box">
+        <div class="engineering-icon">✏️</div>
+        <div class="engineering-title">Prompt Engineering</div>
+        <div class="engineering-desc">Fine-tunes the exact words you give an AI model</div>
+      </div>
+      
+      <div class="plus-icon">+</div>
+      
+      <div class="engineering-box">
+        <div class="engineering-icon">🔧</div>
+        <div class="engineering-title">Context Engineering</div>
+        <div class="engineering-desc">Wraps prompts in the right data, memory, and tools</div>
+      </div>
+    </div>
+
+    <div class="key-points">
+      <div class="point-card" style="--delay: 0s">
+        <div class="point-number">1</div>
+        <h4>Different Levels, Same Goal</h4>
+        <p>You still need clear prompts — context just makes them richer!</p>
+      </div>
+      
+      <div class="point-card" style="--delay: 0.2s">
+        <div class="point-number">2</div>
+        <h4>Prompt = Contract</h4>
+        <p>Defines format, tone, and constraints no matter how much context is added</p>
+      </div>
+      
+      <div class="point-card" style="--delay: 0.4s">
+        <div class="point-number">3</div>
+        <h4>Context Depends on Prompts</h4>
+        <p>Even the best retrieval pipelines start with system prompts</p>
+      </div>
+    </div>
+
+    <div class="bottom-line">
+      <h3>🤝 Partners, Not Competitors</h3>
+      <p>Together, they make AI powerful and predictable. Prompt engineering and context engineering work hand-in-hand to create better AI experiences.</p>
+    </div>
+  </div>
+
+  <script>
+    // Add subtle interaction effects
+    document.querySelectorAll('.engineering-box').forEach(box => {
+      box.addEventListener('mouseenter', () => {
+        box.style.transform = 'translateY(-10px) scale(1.05) rotateY(5deg)';
+      });
+      
+      box.addEventListener('mouseleave', () => {
+        box.style.transform = 'translateY(0) scale(1) rotateY(0deg)';
+      });
+    });
+
+    // Animate point cards on scroll (for mobile)
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.point-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html> 
