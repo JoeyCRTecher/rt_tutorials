@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Context Engineering Doesn’t Kill Prompt Engineering</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; background: #fff;}
+    header {background: #4A90E2; color: white; padding: 2rem 1rem; text-align: center;}
+    header h1 {margin: 0; font-size: 2.5rem;}
+    header p {font-size: 1.2rem; margin-top: 0.5rem;}
+    main {padding: 2rem 1rem; max-width: 800px; margin: auto;}
+    section {margin-bottom: 2rem;}
+    h2 {color: #4A90E2; margin-bottom: 1rem;}
+    ul {margin-left: 1.5rem;}
+    .highlight {background: #eef6fb; padding: 1rem; border-left: 4px solid #4A90E2; color: #1a1a1a;}
+    .intro {color: #4A90E2; font-weight: bold;}
+    footer {text-align: center; padding: 1rem; background: #f4f4f4;}
+    .btn {display: inline-block; background: #4A90E2; color: white; padding: 0.5rem 1rem; text-decoration: none; border-radius: 4px; margin-top: 1rem;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Context Engineering Doesn’t Kill Prompt Engineering</h1>
+    <p>Why these two disciplines are best friends, not foes</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Different Levels, Same Goal</h2>
+      <p class="intro">Prompt engineering fine-tunes the exact words you give an AI model.</p>
+      <p><strong>Context engineering</strong> wraps that prompt in the right data, memory, and tools.</p>
+      <div class="highlight">
+        <p><em>You still need a clear, crisp prompt to start the conversation — context just makes it richer!</em></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. The Prompt Is Your Contract</h2>
+      <p>A prompt is like a handshake agreement: it tells the model how to behave. Without it, context is just noise.</p>
+      <ul>
+        <li>Defines format, tone, and constraints</li>
+        <li>Anchors the AI’s response, no matter how much context is added</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Context Depends on Prompts</h2>
+      <p>Even the best retrieval pipelines start with a system prompt — that’s prompt engineering at work!</p>
+      <ul>
+        <li>System messages</li>
+        <li>Retrieved documents</li>
+        <li>Conversation history</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Real-World Workflows Mix Both</h2>
+      <p>Teams prototype prompts, design context, test end-to-end, and iterate — together.</p>
+      <ol>
+        <li>Draft prompts</li>
+        <li>Build retrieval logic</li>
+        <li>Integrate and test</li>
+        <li>Refine wording and data</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>5. When Context Engineering Is Overkill</h2>
+      <p>For simple rewriting or one-off text tasks, a clever prompt often does the trick — adding complex context may be unnecessary.</p>
+    </section>
+
+    <section class="highlight">
+      <h2>Bottom Line</h2>
+      <p>Prompt engineering and context engineering are partners, not competitors. Together, they make AI powerful and predictable.</p>
+      <p>For more info, get in touch with <a href="https://readytech-group.slack.com/team/U0932TG4L13" target="_blank" rel="noopener">Joey in the EmTech team</a>!</p>
+    </section>
+  </main>
+
+  <footer>
+    
+  </footer>
+</body>
+</html>
