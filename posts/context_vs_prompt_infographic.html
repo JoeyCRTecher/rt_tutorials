@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Context vs Prompt Engineering - Interactive Infographic</title>
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23000'/><rect x='2' y='2' width='28' height='28' rx='4' fill='%2326d07c'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='14' font-weight='bold' fill='%23000'>RT</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='30' fill='%23000'/><rect x='10' y='10' width='160' height='160' rx='20' fill='%2326d07c'/><text x='90' y='120' text-anchor='middle' font-family='system-ui,sans-serif' font-size='80' font-weight='bold' fill='%23000'>RT</text></svg>">
+  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Context Engineering ≠ Death of Prompt Engineering" />
@@ -302,6 +306,55 @@
         <div class="point-number">3</div>
         <h4>Context Depends on Prompts</h4>
         <p>Even the best retrieval pipelines start with system prompts</p>
+      </div>
+    </div>
+
+    <div class="key-points">
+      <div class="point-card" style="--delay: 0.6s">
+        <div class="point-number">👥</div>
+        <h4>AI Recruitment Assistant</h4>
+        <p><strong>Base Prompt:</strong> "Match candidates professionally"<br/>
+        <strong>+ Context:</strong> Job profiles, candidate data, salary info<br/>
+        <strong>= Final Prompt:</strong> "Match candidates professionally.<br/>
+        JOB: Python Dev $90-120k<br/>
+        CANDIDATE: Sarah Chen - 5yrs Python<br/>
+        Should we proceed?"</p>
+      </div>
+      
+      <div class="point-card" style="--delay: 0.8s">
+        <div class="point-number">📋</div>
+        <h4>HR Policy Assistant</h4>
+        <p><strong>Base Prompt:</strong> "Provide compliant HR guidance"<br/>
+        <strong>+ Context:</strong> Employee data, policies, leave balance<br/>
+        <strong>= Final Prompt:</strong> "Provide compliant HR guidance.<br/>
+        EMPLOYEE: John Smith, Manager<br/>
+        QUERY: 3 weeks leave in December<br/>
+        POLICY: Max 2 weeks, Dec blackout<br/>
+        What should I tell him?"</p>
+      </div>
+      
+      <div class="point-card" style="--delay: 1.0s">
+        <div class="point-number">💰</div>
+        <h4>Payroll Processing AI</h4>
+        <p><strong>Base Prompt:</strong> "Calculate accurate payroll"<br/>
+        <strong>+ Context:</strong> Timesheets, rates, deductions, YTD totals<br/>
+        <strong>= Final Prompt:</strong> "Calculate accurate payroll.<br/>
+        EMPLOYEE: Lisa Wang<br/>
+        HOURS: 40 reg + 8 OT<br/>
+        RATE: $28/$42 per hour<br/>
+        Calculate this pay period."</p>
+      </div>
+    </div>
+
+    <div class="key-points" style="margin-top: 2rem;">
+      <div class="point-card" style="--delay: 1.2s; text-align: center;">
+        <h4 style="color: #26d07c; margin-bottom: 1rem;">📚 Learn More</h4>
+        <p style="margin-bottom: 1rem;"><strong>Andrej Karpathy:</strong><br/>
+        <em>"I really like the term 'context engineering' over 'prompt engineering.' It describes the core skill better."</em></p>
+        <a href="https://arxiv.org/abs/2507.13334" target="_blank" rel="noopener" 
+           style="display: inline-block; background: rgba(38, 208, 124, 0.2); color: #26d07c; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0.25rem; border: 1px solid #26d07c; transition: all 0.3s ease;">
+          📖 Context Engineering Survey (160+ pages)
+        </a>
       </div>
     </div>
 

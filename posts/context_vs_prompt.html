@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Why Context Engineering Doesn't Kill Prompt Engineering</title>
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23000'/><rect x='2' y='2' width='28' height='28' rx='4' fill='%2326d07c'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='14' font-weight='bold' fill='%23000'>RT</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='30' fill='%23000'/><rect x='10' y='10' width='160' height='160' rx='20' fill='%2326d07c'/><text x='90' y='120' text-anchor='middle' font-family='system-ui,sans-serif' font-size='80' font-weight='bold' fill='%23000'>RT</text></svg>">
+  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Context Engineering Doesn't Kill Prompt Engineering" />
@@ -262,6 +266,103 @@
     </section>
 
     <section>
+      <h2>Real-World Context Engineering Examples</h2>
+      <p class="intro">Here's how context engineering actually injects data into prompts:</p>
+      
+      <div class="highlight">
+        <h3 style="color: #26d07c; margin-bottom: 1rem;">👥 AI Recruitment Assistant</h3>
+        
+        <p><strong>1. Base Prompt (Prompt Engineering):</strong></p>
+        <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; margin: 0.5rem 0; border-left: 4px solid #26d07c;">
+          "You are a skilled recruiter. Match candidates to roles based on skills, experience, and cultural fit."
+        </div>
+        
+        <p><strong>2. Context Retrieved (Context Engineering):</strong></p>
+        <div style="background: rgba(38, 208, 124, 0.1); padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.9rem; margin: 0.5rem 0; border-left: 4px solid #26d07c;">
+          JOB: Senior Python Developer, $90-120k, Remote OK<br/>
+          CANDIDATE: Sarah Chen - 5yrs Python, Django, AWS experience<br/>
+          SKILLS_MATCH: 85% technical fit, 92% cultural alignment<br/>
+          SALARY_DATA: Market rate $95-115k for this role<br/>
+          INTERVIEW_HISTORY: Passed initial screening, tech round pending
+        </div>
+        
+        <p><strong>3. Final Prompt AI Sees:</strong></p>
+        <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.85rem; margin: 0.5rem 0; border-left: 4px solid #1fa866;">
+          "You are a skilled recruiter. Match candidates to roles based on skills, experience, and cultural fit.<br/><br/>
+          JOB: Senior Python Developer, $90-120k, Remote OK<br/>
+          CANDIDATE: Sarah Chen - 5yrs Python, Django, AWS experience<br/>
+          SKILLS_MATCH: 85% technical fit, 92% cultural alignment<br/>
+          SALARY_DATA: Market rate $95-115k for this role<br/>
+          INTERVIEW_HISTORY: Passed initial screening, tech round pending<br/><br/>
+          Should we proceed with this candidate?"
+        </div>
+        <p><em>Result: AI can make data-driven recommendations instead of generic advice.</em></p>
+      </div>
+      
+      <div class="highlight">
+        <h3 style="color: #26d07c; margin-bottom: 1rem;">📋 HR Policy Assistant</h3>
+        
+        <p><strong>1. Base Prompt (Prompt Engineering):</strong></p>
+        <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; margin: 0.5rem 0; border-left: 4px solid #26d07c;">
+          "Provide accurate HR guidance following company policy. Be clear, supportive, and compliant."
+        </div>
+        
+        <p><strong>2. Context Retrieved (Context Engineering):</strong></p>
+        <div style="background: rgba(38, 208, 124, 0.1); padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.9rem; margin: 0.5rem 0; border-left: 4px solid #26d07c;">
+          EMPLOYEE: John Smith, Engineering Manager, Sydney office<br/>
+          QUERY: "Can I take 3 weeks annual leave in December?"<br/>
+          POLICY: Max 2 weeks consecutive leave, blackout Dec 15-31<br/>
+          LEAVE_BALANCE: 18 days available, 5 days pending approval<br/>
+          MANAGER_OVERRIDE: Available for senior staff with 2 weeks notice
+        </div>
+        
+        <p><strong>3. Final Prompt AI Sees:</strong></p>
+        <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.85rem; margin: 0.5rem 0; border-left: 4px solid #1fa866;">
+          "Provide accurate HR guidance following company policy. Be clear, supportive, and compliant.<br/><br/>
+          EMPLOYEE: John Smith, Engineering Manager, Sydney office<br/>
+          QUERY: "Can I take 3 weeks annual leave in December?"<br/>
+          POLICY: Max 2 weeks consecutive leave, blackout Dec 15-31<br/>
+          LEAVE_BALANCE: 18 days available, 5 days pending approval<br/>
+          MANAGER_OVERRIDE: Available for senior staff with 2 weeks notice<br/><br/>
+          What should I tell this employee?"
+        </div>
+        <p><em>Result: AI provides policy-compliant advice using employee-specific data and current regulations.</em></p>
+      </div>
+      
+      <div class="highlight">
+        <h3 style="color: #26d07c; margin-bottom: 1rem;">💰 Payroll Processing Assistant</h3>
+        
+        <p><strong>1. Base Prompt (Prompt Engineering):</strong></p>
+        <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; margin: 0.5rem 0; border-left: 4px solid #26d07c;">
+          "Calculate accurate payroll ensuring compliance with tax laws. Verify calculations and flag discrepancies."
+        </div>
+        
+        <p><strong>2. Context Retrieved (Context Engineering):</strong></p>
+        <div style="background: rgba(38, 208, 124, 0.1); padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.9rem; margin: 0.5rem 0; border-left: 4px solid #26d07c;">
+          EMPLOYEE: Lisa Wang, Marketing Specialist<br/>
+          HOURS: 40 regular + 8 overtime hours<br/>
+          RATE: $28/hour regular, $42/hour overtime<br/>
+          DEDUCTIONS: Tax $187, Super $89, Health Insurance $45<br/>
+          YTD_TOTALS: Gross $31,200, Tax $4,680, Super $2,808
+        </div>
+        
+        <p><strong>3. Final Prompt AI Sees:</strong></p>
+        <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.85rem; margin: 0.5rem 0; border-left: 4px solid #1fa866;">
+          "Calculate accurate payroll ensuring compliance with tax laws. Verify calculations and flag discrepancies.<br/><br/>
+          EMPLOYEE: Lisa Wang, Marketing Specialist<br/>
+          HOURS: 40 regular + 8 overtime hours<br/>
+          RATE: $28/hour regular, $42/hour overtime<br/>
+          DEDUCTIONS: Tax $187, Super $89, Health Insurance $45<br/>
+          YTD_TOTALS: Gross $31,200, Tax $4,680, Super $2,808<br/><br/>
+          Calculate this pay period and verify all amounts are correct."
+        </div>
+        <p><em>Result: AI processes payroll with real employee data and current tax calculations.</em></p>
+      </div>
+      
+      <p>As <strong>Andrej Karpathy</strong> noted: <em>"I really like the term 'context engineering' over 'prompt engineering.' It describes the core skill better: the art of providing all the context for the task."</em></p>
+    </section>
+
+    <section>
       <h2>Different Levels, Same Goal</h2>
       <p class="intro">Prompt engineering fine-tunes the exact words you give an AI model.</p>
       <p><strong>Context engineering</strong> manages the information environment where that prompt operates.</p>
@@ -313,7 +414,18 @@
   </main>
 
   <footer>
-    <a href="context_vs_prompt_infographic.html" class="btn">📊 View Fewer Words</a>
+    <div style="margin-bottom: 2rem;">
+      <h3 style="color: #26d07c; margin-bottom: 1rem;">📚 Additional Resources</h3>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+        <a href="https://arxiv.org/abs/2507.13334" target="_blank" rel="noopener" class="btn" style="font-size: 0.9rem;">
+          📖 Context Engineering Survey (160+ pages)
+        </a>
+        <a href="context_vs_prompt_infographic.html" class="btn">📊 View Fewer Words</a>
+      </div>
+      <p style="margin-top: 1rem; font-style: italic; opacity: 0.8;">
+        "I really like the term 'context engineering' over 'prompt engineering.' It describes the core skill better." - Andrej Karpathy
+      </p>
+    </div>
   </footer>
   </div>
 </body>
