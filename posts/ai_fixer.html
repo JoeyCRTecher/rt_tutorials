@@ -16,6 +16,19 @@
 
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rt-green': '#26d07c',
+                        'rt-green-dark': '#1fa866',
+                        'rt-green-light': 'rgba(38, 208, 124, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
 
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,8 +38,24 @@
     <style>
         /* Apply the Inter font family */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Segoe UI', 'Inter', sans-serif;
+            background: #000;
+            color: #fff;
         }
+
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(38, 208, 124, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #26d07c, #1fa866);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         /* A subtle glow effect for the header and footer */
         .glow-effect {
             box-shadow: 0 0 15px rgba(56, 189, 248, 0.3), 0 0 30px rgba(56, 189, 248, 0.2);
@@ -43,8 +72,20 @@
 </head>
 <body class="bg-gray-900 text-gray-200 antialiased">
 
+    <!-- Navigation Header -->
+    <nav class="glass-effect fixed top-0 left-0 right-0 z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity">ReadyAI Tutorials</a>
+            <div class="flex space-x-6 text-sm">
+                <a href="../index.html#tutorials" class="hover:text-rt-green transition-colors">Tutorials</a>
+                <a href="../index.html#posts" class="hover:text-rt-green transition-colors">Posts</a>
+                <a href="../index.html#about" class="hover:text-rt-green transition-colors">About</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Main Container -->
-    <div class="container mx-auto p-6 md:p-12">
+    <div class="container mx-auto p-6 md:p-12 pt-24">
 
         <!-- Header Section -->
         <header class="text-center mb-16">

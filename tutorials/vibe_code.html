@@ -16,6 +16,22 @@
     <meta property="twitter:title" content="Vibe Coding: Quick Start for Web Dev" />
     <meta property="twitter:description" content="A quick and fun guide to jumpstart your web development journey. Learn core concepts with Vibe Coding." />
 
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rt-green': '#26d07c',
+                        'rt-green-dark': '#1fa866',
+                        'rt-green-light': 'rgba(38, 208, 124, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -25,6 +41,19 @@
             color: white;
             line-height: 1.6;
             animation: fadeIn 0.8s ease-out;
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(38, 208, 124, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #26d07c, #1fa866);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         header {
@@ -107,13 +136,6 @@
             color: #26d07c;
             margin-bottom: 0.5rem;
             font-size: 1.2rem;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(90deg, #26d07c, #1fa866);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
         
         .card {
@@ -318,6 +340,19 @@
     </style>
 </head>
 <body>
+    <!-- Navigation Header -->
+    <nav class="glass-effect fixed top-0 left-0 right-0 z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity">ReadyAI Tutorials</a>
+            <div class="flex space-x-6 text-sm">
+                <a href="../index.html#tutorials" class="hover:text-rt-green transition-colors">Tutorials</a>
+                <a href="../index.html#posts" class="hover:text-rt-green transition-colors">Posts</a>
+                <a href="../index.html#about" class="hover:text-rt-green transition-colors">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-20">
     <header>
         <h1><span class="gradient-text">Level Up Your Ideas:</span></h1>
         <h2>A Quick Start to Vibe Coding!</h2>
@@ -415,5 +450,6 @@
             </div>
         </section>
     </main>
+    </div>
 </body>
 </html>
