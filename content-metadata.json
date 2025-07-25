@@ -1,0 +1,409 @@
+{
+  "version": "1.0",
+  "description": "Content metadata and relationship mapping for RT Tutorials cross-linking system",
+  "last_updated": "2024-01-15",
+  "pages": {
+    "tutorials/prompt_engineering.html": {
+      "title": "The Complete Guide to Prompt Engineering",
+      "description": "Master the art of crafting effective prompts for AI systems. Learn advanced techniques for better AI interactions.",
+      "type": "tutorial",
+      "format": "comprehensive_guide",
+      "difficulty": "beginner_to_intermediate",
+      "estimated_read_time": "15-20 minutes",
+      "primary_topics": [
+        "prompt-engineering",
+        "ai-interaction",
+        "communication-with-ai",
+        "llm-optimization"
+      ],
+      "secondary_topics": [
+        "ai-fundamentals",
+        "best-practices",
+        "practical-techniques"
+      ],
+      "target_audience": [
+        "developers",
+        "ai-practitioners",
+        "content-creators",
+        "business-users"
+      ],
+      "learning_objectives": [
+        "craft_effective_prompts",
+        "understand_ai_communication",
+        "optimize_ai_responses",
+        "avoid_common_mistakes"
+      ]
+    },
+    "tutorials/vibe_code.html": {
+      "title": "Vibe Coding: Your Quick Start",
+      "description": "Explore intuitive coding practices and development workflows that enhance productivity and code quality.",
+      "type": "tutorial",
+      "format": "hands_on_guide",
+      "difficulty": "beginner_to_intermediate",
+      "estimated_read_time": "12-15 minutes",
+      "primary_topics": [
+        "rapid-development",
+        "ai-assisted-coding",
+        "development-workflow",
+        "intuitive-programming"
+      ],
+      "secondary_topics": [
+        "web-development",
+        "productivity",
+        "modern-practices",
+        "ai-tools"
+      ],
+      "target_audience": [
+        "developers",
+        "web-developers",
+        "junior-programmers",
+        "ai-enthusiasts"
+      ],
+      "learning_objectives": [
+        "rapid_prototyping",
+        "ai_assisted_development",
+        "workflow_optimization",
+        "modern_coding_practices"
+      ]
+    },
+    "posts/context_vs_prompt.html": {
+      "title": "Context Engineering Doesn't Kill Prompt Engineering",
+      "description": "Understanding the fundamental differences between context and prompts in AI interactions.",
+      "type": "post",
+      "format": "analytical_article",
+      "difficulty": "beginner",
+      "estimated_read_time": "8-12 minutes",
+      "primary_topics": [
+        "context-engineering",
+        "prompt-engineering",
+        "ai-fundamentals",
+        "ai-interaction-theory"
+      ],
+      "secondary_topics": [
+        "llm-optimization",
+        "ai-communication",
+        "best-practices"
+      ],
+      "target_audience": [
+        "ai-practitioners",
+        "developers",
+        "technical-professionals",
+        "ai-enthusiasts"
+      ],
+      "learning_objectives": [
+        "understand_context_vs_prompts",
+        "grasp_complementary_relationship",
+        "foundation_for_advanced_techniques"
+      ]
+    },
+    "posts/context_vs_prompt_infographic.html": {
+      "title": "Context Engineering ≠ Death of Prompt Engineering",
+      "description": "Visual guide illustrating the key concepts of context versus prompts in AI systems.",
+      "type": "post",
+      "format": "interactive_infographic",
+      "difficulty": "beginner",
+      "estimated_read_time": "3-5 minutes",
+      "primary_topics": [
+        "context-engineering",
+        "prompt-engineering",
+        "visual-learning",
+        "ai-fundamentals"
+      ],
+      "secondary_topics": [
+        "quick-reference",
+        "concept-visualization"
+      ],
+      "target_audience": [
+        "visual-learners",
+        "ai-practitioners",
+        "busy-professionals",
+        "social-media-users"
+      ],
+      "learning_objectives": [
+        "quick_concept_grasp",
+        "visual_understanding",
+        "shareable_knowledge"
+      ]
+    },
+    "posts/ai_fixer.html": {
+      "title": "The AI Fixer",
+      "description": "Exploring the emergence of the AI Fixer role and its impact on software development practices.",
+      "type": "post",
+      "format": "industry_analysis",
+      "difficulty": "intermediate",
+      "estimated_read_time": "6-8 minutes",
+      "primary_topics": [
+        "ai-roles",
+        "software-development-transformation",
+        "career-development",
+        "industry-trends"
+      ],
+      "secondary_topics": [
+        "hiring-practices",
+        "team-dynamics",
+        "skill-evolution",
+        "ai-adoption"
+      ],
+      "target_audience": [
+        "senior-developers",
+        "team-leads",
+        "hiring-managers",
+        "career-changers"
+      ],
+      "learning_objectives": [
+        "understand_emerging_roles",
+        "career_planning",
+        "industry_awareness"
+      ]
+    },
+    "posts/junior_programmers_ai.html": {
+      "title": "How Junior Programmers Should Use AI",
+      "description": "Critical insights on using AI effectively as a junior developer - augmentation, not replacement.",
+      "type": "post",
+      "format": "practical_guide",
+      "difficulty": "beginner",
+      "estimated_read_time": "10-12 minutes",
+      "primary_topics": [
+        "junior-development",
+        "ai-usage-guidelines",
+        "skill-development",
+        "learning-fundamentals"
+      ],
+      "secondary_topics": [
+        "best-practices",
+        "avoiding-pitfalls",
+        "career-advice",
+        "effective-learning"
+      ],
+      "target_audience": [
+        "junior-programmers",
+        "coding-bootcamp-graduates",
+        "career-changers",
+        "mentors"
+      ],
+      "learning_objectives": [
+        "responsible_ai_usage",
+        "skill_building_focus",
+        "avoiding_dependency_traps",
+        "effective_learning_strategies"
+      ]
+    },
+    "posts/ai_dinner_infographic.html": {
+      "title": "Stop Overthinking Dinner - Use AI",
+      "description": "A fun infographic showing how AI can solve everyday problems like meal planning.",
+      "type": "post",
+      "format": "visual_infographic",
+      "difficulty": "beginner",
+      "estimated_read_time": "2-3 minutes",
+      "primary_topics": [
+        "practical-ai-usage",
+        "everyday-applications",
+        "problem-solving",
+        "ai-accessibility"
+      ],
+      "secondary_topics": [
+        "lifestyle-improvement",
+        "decision-making",
+        "ai-democratization"
+      ],
+      "target_audience": [
+        "general-public",
+        "ai-curious",
+        "busy-professionals",
+        "families"
+      ],
+      "learning_objectives": [
+        "recognize_ai_opportunities",
+        "overcome_ai_intimidation",
+        "practical_application_thinking"
+      ]
+    },
+    "posts/ai_security.html": {
+      "title": "AI Security Best Practices",
+      "description": "Essential security considerations when implementing AI systems in production environments.",
+      "type": "post",
+      "format": "practical_guide",
+      "difficulty": "intermediate",
+      "estimated_read_time": "12-15 minutes",
+      "primary_topics": [
+        "ai-security",
+        "production-ai",
+        "risk-management",
+        "best-practices"
+      ],
+      "secondary_topics": [
+        "compliance",
+        "data-privacy",
+        "model-safety"
+      ],
+      "target_audience": [
+        "senior-developers",
+        "security-engineers",
+        "ai-practitioners",
+        "team-leads"
+      ],
+      "learning_objectives": [
+        "identify_ai_security_risks",
+        "implement_security_controls",
+        "ensure_compliance",
+        "monitor_ai_systems"
+      ]
+    }
+  },
+  "relationships": {
+    "content_pairs": {
+      "posts/context_vs_prompt.html": {
+        "companion_format": "posts/context_vs_prompt_infographic.html",
+        "relationship_type": "article_to_visual",
+        "description": "Detailed article with visual summary"
+      }
+    },
+    "learning_progressions": {
+      "ai_fundamentals_track": [
+        "posts/context_vs_prompt.html",
+        "tutorials/prompt_engineering.html",
+        "tutorials/vibe_code.html"
+      ],
+      "beginner_developer_track": [
+        "posts/junior_programmers_ai.html",
+        "tutorials/vibe_code.html",
+        "posts/ai_fixer.html"
+      ]
+    },
+    "conceptual_relationships": {
+      "theory_to_practice": [
+        {
+          "theory": "posts/context_vs_prompt.html",
+          "practice": "tutorials/prompt_engineering.html"
+        },
+        {
+          "theory": "tutorials/prompt_engineering.html",
+          "practice": "tutorials/vibe_code.html"
+        }
+      ],
+      "problem_to_solution": [
+        {
+          "problem": "posts/ai_dinner_infographic.html",
+          "solution": "tutorials/vibe_code.html"
+        }
+      ],
+      "role_progression": [
+        {
+          "junior": "posts/junior_programmers_ai.html",
+          "senior": "posts/ai_fixer.html"
+        },
+        {
+          "junior": "posts/ai_security.html",
+          "senior": "posts/junior_programmers_ai.html"
+        }
+      ]
+    },
+    "audience_crossover": {
+      "visual_learners": [
+        "posts/context_vs_prompt_infographic.html",
+        "posts/ai_dinner_infographic.html"
+      ],
+      "developers": [
+        "tutorials/prompt_engineering.html",
+        "tutorials/vibe_code.html",
+        "posts/junior_programmers_ai.html",
+        "posts/ai_fixer.html"
+      ],
+      "ai_practitioners": [
+        "posts/context_vs_prompt.html",
+        "tutorials/prompt_engineering.html"
+      ]
+    }
+  },
+  "cross_linking_rules": {
+    "auto_link_rules": [
+      {
+        "rule_name": "companion_formats",
+        "description": "Always link articles to their visual counterparts",
+        "condition": "content_pairs relationship exists",
+        "bidirectional": true
+      },
+      {
+        "rule_name": "sequential_learning",
+        "description": "Link to next step in learning progression",
+        "condition": "same learning track",
+        "bidirectional": false
+      },
+      {
+        "rule_name": "shared_primary_topics",
+        "description": "Link content with 2+ shared primary topics",
+        "condition": "intersection of primary_topics >= 2",
+        "bidirectional": true
+      }
+    ],
+    "manual_exceptions": [
+      {
+        "page": "posts/ai_dinner_infographic.html",
+        "never_link_to": [],
+        "always_link_to": [
+          "tutorials/vibe_code.html",
+          "tutorials/prompt_engineering.html"
+        ],
+        "reason": "Gateway content should point to core tutorials"
+      }
+    ],
+    "link_priorities": [
+      "companion_formats",
+      "learning_progressions",
+      "conceptual_relationships",
+      "shared_primary_topics",
+      "audience_crossover"
+    ],
+    "max_related_links": 3,
+    "min_related_links": 1
+  },
+  "content_tags": {
+    "difficulty_levels": [
+      "beginner",
+      "beginner_to_intermediate",
+      "intermediate",
+      "advanced"
+    ],
+    "content_types": [
+      "tutorial",
+      "post",
+      "infographic",
+      "guide",
+      "analysis"
+    ],
+    "formats": [
+      "comprehensive_guide",
+      "hands_on_guide",
+      "analytical_article",
+      "interactive_infographic",
+      "visual_infographic",
+      "industry_analysis",
+      "practical_guide"
+    ],
+    "topic_categories": {
+      "ai_fundamentals": [
+        "prompt-engineering",
+        "context-engineering",
+        "ai-interaction",
+        "ai-fundamentals"
+      ],
+      "development_practices": [
+        "rapid-development",
+        "ai-assisted-coding",
+        "development-workflow",
+        "modern-practices"
+      ],
+      "career_guidance": [
+        "junior-development",
+        "skill-development",
+        "career-development",
+        "ai-roles"
+      ],
+      "practical_applications": [
+        "practical-ai-usage",
+        "everyday-applications",
+        "problem-solving"
+      ]
+    }
+  }
+}
