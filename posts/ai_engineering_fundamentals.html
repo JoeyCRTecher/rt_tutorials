@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Engineering Fundamentals - ReadyAI Tutorials</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23000'/><rect x='2' y='2' width='28' height='28' rx='4' fill='%2326d07c'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='14' font-weight='bold' fill='%23000'>RT</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='30' fill='%23000'/><rect x='10' y='10' width='160' height='160' rx='20' fill='%2326d07c'/><text x='90' y='120' text-anchor='middle' font-family='system-ui,sans-serif' font-size='80' font-weight='bold' fill='%23000'>RT</text></svg>">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="AI Engineering Fundamentals">
+    <meta property="og:description" content="Essential principles and practices for AI engineering, covering evaluation, RAG, finetuning, and structured implementation approaches.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joeycrtecher.github.io/rt_tutorials/posts/ai_engineering_fundamentals.html">
+    <meta property="og:image" content="https://placehold.co/1200x630/000000/26d07c?text=AI+Engineering+Fundamentals">
+    <meta property="og:image:alt" content="AI Engineering Fundamentals - Essential practices and principles">
+    <meta property="og:site_name" content="ReadyAI Tutorials">
+
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rt-green': '#26d07c',
+                        'rt-green-dark': '#1fa866',
+                        'rt-green-light': 'rgba(38, 208, 124, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(38, 208, 124, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #26d07c, #1fa866);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(38, 208, 124, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover {
+            background: rgba(38, 208, 124, 0.05);
+            border-color: rgba(38, 208, 124, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(38, 208, 124, 0.1), rgba(31, 168, 102, 0.05));
+            border-left: 4px solid #26d07c;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #26d07c, #1fa866);
+            color: #000;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, #1fa866, #26d07c);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(38, 208, 124, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+
+    <!-- Navigation Header -->
+    <nav class="glass-effect fixed top-0 left-0 right-0 z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity">ReadyAI Tutorials</a>
+            <div class="flex space-x-6 text-sm">
+                <a href="../index.html#tutorials" class="hover:text-rt-green transition-colors">Tutorials</a>
+                <a href="../index.html#posts" class="hover:text-rt-green transition-colors">Posts</a>
+                <a href="../index.html#about" class="hover:text-rt-green transition-colors">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="pt-20">
+        <div class="max-w-4xl mx-auto px-6 py-12">
+
+            <!-- Header Section -->
+            <header class="text-center mb-16 animate-fade-in">
+                <h1 class="text-4xl md:text-6xl font-black gradient-text mb-6">
+                    AI Engineering Fundamentals
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    Essential principles and practices for building production-ready AI systems, from evaluation strategies to structured implementation approaches.
+                </p>
+            </header>
+
+            <!-- Similarities Section -->
+            <section class="section-card rounded-2xl p-8 mb-12 animate-fade-in">
+                <h2 class="text-3xl font-bold text-rt-green mb-6">Similarities: AI Engineering vs Software Engineering</h2>
+                <div class="highlight-box p-6 rounded-xl">
+                    <p class="text-lg leading-relaxed">
+                        AI engineering is closer to <strong class="text-rt-green">Software Engineering</strong> than ML engineering. 
+                        In both AI and Software engineering, the emphasis is on the <strong class="text-white">product</strong> and the model is more of an <em>implementation detail</em>.
+                    </p>
+                </div>
+            </section>
+
+            <!-- AI Engineering Basics -->
+            <section class="mb-16 animate-fade-in">
+                <h2 class="text-4xl font-bold gradient-text mb-12 text-center">AI Engineering Basics</h2>
+
+                <!-- Evaluation -->
+                <div class="section-card rounded-2xl p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-rt-green mb-4 flex items-center">
+                        <span class="w-2 h-2 bg-rt-green rounded-full mr-3"></span>
+                        Evaluation
+                    </h3>
+                    <p class="text-gray-300 mb-4">Comprehensive evaluation needs to cover both approaches:</p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                            <h4 class="text-xl font-semibold text-white mb-3">🤖 Automated</h4>
+                            <p class="text-gray-300">Systematic testing with metrics, benchmarks, and automated validation pipelines.</p>
+                        </div>
+                        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                            <h4 class="text-xl font-semibold text-white mb-3">👥 Manual</h4>
+                            <p class="text-gray-300">Direct user feedback and conversations - <strong class="text-rt-green">listed as the highest value piece</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Using RAG -->
+                <div class="section-card rounded-2xl p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-rt-green mb-4 flex items-center">
+                        <span class="w-2 h-2 bg-rt-green rounded-full mr-3"></span>
+                        Using RAG
+                    </h3>
+                    <div class="highlight-box p-6 rounded-xl">
+                        <p class="text-lg mb-4">Understanding the pros and cons between using:</p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                                <h4 class="font-semibold text-rt-green mb-2">🔍 Keyword Search</h4>
+                                <p class="text-sm text-gray-300">Traditional exact matching, fast and precise for known queries</p>
+                            </div>
+                            <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                                <h4 class="font-semibold text-rt-green mb-2">🧠 Vector Store</h4>
+                                <p class="text-sm text-gray-300">Semantic similarity, better for conceptual understanding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Finetuning -->
+                <div class="section-card rounded-2xl p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-rt-green mb-4 flex items-center">
+                        <span class="w-2 h-2 bg-rt-green rounded-full mr-3"></span>
+                        Finetuning
+                    </h3>
+                    <div class="bg-yellow-900 bg-opacity-20 border border-yellow-600 p-6 rounded-xl">
+                        <p class="text-lg leading-relaxed">
+                            Used as a <strong class="text-yellow-400">last resort</strong> because of:
+                        </p>
+                        <ul class="mt-4 space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <strong>Hosting overhead</strong> - requires dedicated infrastructure
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <strong>Pace of model development</strong> - often erodes finetuned advantages quickly
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Structured Approach -->
+                <div class="section-card rounded-2xl p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-rt-green mb-4 flex items-center">
+                        <span class="w-2 h-2 bg-rt-green rounded-full mr-3"></span>
+                        Structured Approach
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="highlight-box p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-white mb-3">🚀 Start with Human-in-the-Loop</h4>
+                            <p class="text-gray-300 leading-relaxed">
+                                Begin with humans in the loop and test the places where GenAI can make a <strong class="text-rt-green">high impact</strong>. 
+                                <em>(Clue: it's often not "everywhere.")</em>
+                            </p>
+                        </div>
+                        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                            <h4 class="text-xl font-semibold text-white mb-3">📊 Record Process Data</h4>
+                            <p class="text-gray-300">Systematically record data from the human processes to inform AI integration decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <div class="text-center mb-12">
+                <div class="section-card rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-white mb-4">Ready to implement AI engineering best practices?</h3>
+                    <p class="text-gray-300 mb-6">Connect with our Emerging Technology team for guidance and support.</p>
+                    <a href="https://readytech-group.slack.com/team/U0932TG4L13" target="_blank" rel="noopener" 
+                       class="cta-button inline-block px-8 py-3 rounded-xl text-lg font-semibold transition-all duration-300">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+
+            <!-- Related Content -->
+            <section class="related-content mb-16">
+                <div class="section-card rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold gradient-text mb-6 text-center">Related Content</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <a href="../tutorials/prompt_engineering.html" class="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700 hover:border-rt-green transition-all duration-300 group">
+                            <div class="text-rt-green mb-2 text-sm font-medium">Tutorial</div>
+                            <h3 class="text-rt-green mb-2 text-lg font-semibold group-hover:text-white transition-colors">The Complete Guide to Prompt Engineering</h3>
+                            <p class="text-gray-300 text-sm">Master the art of crafting effective prompts for AI systems. Learn advanced techniques for better AI interactions.</p>
+                        </a>
+                        <a href="ai_fixer.html" class="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700 hover:border-rt-green transition-all duration-300 group">
+                            <div class="text-rt-green mb-2 text-sm font-medium">Post</div>
+                            <h3 class="text-rt-green mb-2 text-lg font-semibold group-hover:text-white transition-colors">The AI Fixer</h3>
+                            <p class="text-gray-300 text-sm">Exploring the emergence of the AI Fixer role and its impact on software development practices.</p>
+                        </a>
+                        <a href="junior_programmers_ai.html" class="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700 hover:border-rt-green transition-all duration-300 group">
+                            <div class="text-rt-green mb-2 text-sm font-medium">Post</div>
+                            <h3 class="text-rt-green mb-2 text-lg font-semibold group-hover:text-white transition-colors">How Junior Programmers Should Use AI</h3>
+                            <p class="text-gray-300 text-sm">Critical insights on using AI effectively as a junior developer - augmentation, not replacement.</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Source Reference -->
+            <footer class="text-center text-gray-500 text-sm">
+                <p>
+                    <a href="https://substack.com/redirect/c7ee1681-7410-4d97-a2c6-ca4e726e6c8b?j=eyJ1IjoiNGl4a2kifQ.WXby7im0iLsbXgsNNrlqzB19Oy01dPBF5OiQ1Tw_OXU" 
+                       target="_blank" rel="noopener" class="hover:text-rt-green transition-colors">
+                        Source Reference
+                    </a>
+                </p>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html> 
