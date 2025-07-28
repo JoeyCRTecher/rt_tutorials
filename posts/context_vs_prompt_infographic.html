@@ -21,35 +21,29 @@
   <meta property="twitter:title" content="Context Engineering ≠ Death of Prompt Engineering" />
   <meta property="twitter:description" content="Interactive infographic showing why context engineering and prompt engineering are best friends, not foes." />
   
-  <!-- Tailwind CSS for styling -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-      tailwind.config = {
-          theme: {
-              extend: {
-                  colors: {
-                      'rt-green': '#26d07c',
-                      'rt-green-dark': '#1fa866',
-                      'rt-green-light': 'rgba(38, 208, 124, 0.1)',
-                  }
-              }
-          }
-      }
-  </script>
-  
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+      <!-- RT Tutorials Stylesheet -->
+    <link rel="stylesheet" href="../styles.css">
     
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #000;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      overflow-x: hidden;
+    <!-- Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rt-green': '#26d07c',
+                        'rt-green-dark': '#1fa866',
+                        'rt-green-light': 'rgba(38, 208, 124, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+  
+
+
+
+      
     }
 
     .glass-effect {
@@ -249,9 +243,9 @@
       .engineering-box { width: 100%; max-width: 300px; }
       .title { font-size: 2rem; }
     }
-  </style>
+
 </head>
-<body>
+<body class="bg-black text-white min-h-screen">
   <!-- Navigation Header -->
   <nav class="glass-effect fixed top-0 left-0 right-0 z-50 px-6 py-4">
       <div class="max-w-6xl mx-auto flex justify-between items-center">

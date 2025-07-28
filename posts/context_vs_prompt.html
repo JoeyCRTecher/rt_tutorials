@@ -21,7 +21,10 @@
   <meta property="twitter:title" content="Context Engineering Doesn't Kill Prompt Engineering" />
   <meta property="twitter:description" content="Why these two disciplines are best friends, not foes. Learn how they work together for better AI." />
   
-  <!-- Tailwind CSS for styling -->
+  <!-- RT Tutorials Stylesheet -->
+  <link rel="stylesheet" href="../styles.css">
+  
+  <!-- Tailwind CSS for utility classes -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
       tailwind.config = {
@@ -36,196 +39,10 @@
           }
       }
   </script>
-  
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #000;
-      color: white;
-      line-height: 1.6;
-      animation: fadeIn 0.8s ease-out;
-    }
 
-    .glass-effect {
-        backdrop-filter: blur(10px);
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(38, 208, 124, 0.2);
-    }
 
-    .gradient-text {
-        background: linear-gradient(135deg, #26d07c, #1fa866);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-    
-    header {
-      background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
-      color: white;
-      padding: 3rem 1rem;
-      text-align: center;
-      border-bottom: 2px solid #26d07c;
-    }
-    
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      animation: fadeInDown 1s ease-out;
-    }
-    
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      opacity: 0.9;
-      animation: fadeInUp 1s ease-out 0.3s both;
-    }
-    
-    main {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    
-    section {
-      margin-bottom: 3rem;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(38, 208, 124, 0.2);
-      border-radius: 15px;
-      padding: 2rem;
-      transition: all 0.3s ease;
-      animation: fadeInUp 0.6s ease-out;
-    }
-    
-    section:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 10px 30px rgba(38, 208, 124, 0.1);
-    }
-    
-    h2 {
-      color: #26d07c;
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    h2::before {
-      content: "▶";
-      color: #26d07c;
-      font-size: 1rem;
-    }
-    
-    ul, ol {
-      margin-left: 1.5rem;
-      margin-top: 1rem;
-    }
-    
-    li {
-      margin-bottom: 0.5rem;
-      padding-left: 0.5rem;
-    }
-    
-    ul li::marker {
-      color: #26d07c;
-    }
-    
-    ol li::marker {
-      color: #26d07c;
-      font-weight: bold;
-    }
-    
-    .highlight {
-      background: rgba(38, 208, 124, 0.1);
-      border: 1px solid #26d07c;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .highlight::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: #26d07c;
-    }
-    
-    .intro {
-      color: #26d07c;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-    
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: rgba(38, 208, 124, 0.05);
-      border-top: 1px solid #26d07c;
-      margin-top: 3rem;
-    }
-    
-    .btn {
-      display: inline-block;
-      background: linear-gradient(45deg, #26d07c, #1fa866);
-      color: #000;
-      padding: 0.8rem 1.5rem;
-      text-decoration: none;
-      border-radius: 25px;
-      margin-top: 1rem;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .btn:hover {
-      transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 8px 20px rgba(38, 208, 124, 0.3);
-    }
-    
-    a {
-      color: #26d07c;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    
-    a:hover {
-      color: #1fa866;
-      text-shadow: 0 0 8px rgba(38, 208, 124, 0.5);
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    @media (max-width: 768px) {
-      header h1 { font-size: 2rem; }
-      main { padding: 1rem; }
-      section { padding: 1.5rem; }
-    }
-  </style>
 </head>
-<body>
+<body class="bg-black text-white min-h-screen">
   <!-- Navigation Header -->
   <nav class="glass-effect fixed top-0 left-0 right-0 z-50 px-6 py-4">
       <div class="max-w-6xl mx-auto flex justify-between items-center">

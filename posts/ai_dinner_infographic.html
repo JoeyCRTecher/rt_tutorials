@@ -9,6 +9,10 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23000'/><rect x='2' y='2' width='28' height='28' rx='4' fill='%2326d07c'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='14' font-weight='bold' fill='%23000'>RT</text></svg>">
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='30' fill='%23000'/><rect x='10' y='10' width='160' height='160' rx='20' fill='%2326d07c'/><text x='90' y='120' text-anchor='middle' font-family='system-ui,sans-serif' font-size='80' font-weight='bold' fill='%23000'>RT</text></svg>">
     
+    <!-- RT Tutorials Stylesheet -->
+    <link rel="stylesheet" href="../styles.css">
+    
+    <!-- Tailwind CSS for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,46 +27,6 @@
             }
         }
     </script>
-    
-    <style>
-        .glass-effect {
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid #26d07c;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #26d07c, #1fa866);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .pulse-green {
-            animation: pulse-green 2s infinite;
-        }
-        
-        @keyframes pulse-green {
-            0%, 100% { box-shadow: 0 0 20px rgba(38, 208, 124, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(38, 208, 124, 0.6); }
-        }
-        
-        .before-section {
-            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(153, 27, 27, 0.1));
-            border-left: 4px solid #dc2626;
-        }
-        
-        .after-section {
-            background: linear-gradient(135deg, rgba(38, 208, 124, 0.1), rgba(31, 168, 102, 0.1));
-            border-left: 4px solid #26d07c;
-        }
-        
-        .time-badge {
-            background: linear-gradient(135deg, #26d07c, #1fa866);
-            transform: rotate(-5deg);
-            box-shadow: 0 4px 15px rgba(38, 208, 124, 0.3);
-        }
-    </style>
 </head>
 <body class="bg-black text-white min-h-screen font-sans">
     <!-- Navigation -->

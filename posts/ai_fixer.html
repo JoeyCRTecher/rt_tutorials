@@ -18,7 +18,10 @@
     <meta property="og:image:alt" content="An infographic on the Emergence of the AI Fixer">
     <meta property="og:site_name" content="The Emergence of the AI Fixer">
 
-    <!-- Tailwind CSS for styling -->
+    <!-- RT Tutorials Stylesheet -->
+    <link rel="stylesheet" href="../styles.css">
+    
+    <!-- Tailwind CSS for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -39,42 +42,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
-    <style>
-        /* Apply the Inter font family */
-        body {
-            font-family: 'Segoe UI', 'Inter', sans-serif;
-            background: #000;
-            color: #fff;
-        }
 
-        .glass-effect {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(38, 208, 124, 0.2);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #26d07c, #1fa866);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* A subtle glow effect for the header and footer */
-        .glow-effect {
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3), 0 0 30px rgba(56, 189, 248, 0.2);
-        }
-        /* Animation for cards on load */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .fade-in-card {
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-    </style>
 </head>
-<body class="bg-gray-900 text-gray-200 antialiased">
+<body class="bg-black text-white min-h-screen antialiased">
 
     <!-- Navigation Header -->
     <nav class="glass-effect fixed top-0 left-0 right-0 z-50 px-6 py-4">
