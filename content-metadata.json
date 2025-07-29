@@ -282,37 +282,35 @@
       ]
     },
     "tutorials/optimizing_ai_assistants.html": {
-      "title": "Optimizing AI Coding Assistants: Planning and Guidelines",
-      "description": "Learn to maximize AI assistant effectiveness through strategic planning, model-specific instructions, and deliberate development practices.",
+      "title": "Vibe Coding: Intermediate Skills",
+      "description": "Level up your AI assistant effectiveness with three practical techniques for better, more consistent results.",
       "type": "tutorial",
-      "format": "comprehensive_guide",
-      "difficulty": "intermediate",
-      "estimated_read_time": "15-20 minutes",
+      "format": "hands_on_guide",
+      "difficulty": "beginner_to_intermediate",
+      "estimated_read_time": "8-10 minutes",
       "primary_topics": [
-        "ai-assistant-optimization",
+        "vibe-coding-intermediate",
+        "ai-assistant-optimization", 
         "development-planning",
-        "ai-guidance",
-        "coding-best-practices"
+        "practical-ai-techniques"
       ],
       "secondary_topics": [
         "github-copilot",
         "claude-optimization",
-        "reuse-strategies",
-        "model-specific-instructions",
-        "development-workflow"
+        "planning-frameworks",
+        "model-specific-instructions"
       ],
       "target_audience": [
         "developers",
-        "senior-developers",
-        "team-leads",
-        "ai-practitioners"
+        "junior-programmers",
+        "ai-enthusiasts",
+        "vibe-coders"
       ],
       "learning_objectives": [
-        "optimize_ai_assistant_performance",
-        "implement_planning_frameworks",
-        "create_model_specific_guidelines",
-        "prioritize_code_reuse",
-        "establish_consistent_development_practices"
+        "implement_planning_prompts",
+        "customize_model_instructions", 
+        "create_personal_ai_config",
+        "level_up_vibe_coding_skills"
       ]
     }
   },
