@@ -280,6 +280,40 @@
         "choose_appropriate_ai_techniques",
         "structure_ai_implementation"
       ]
+    },
+    "tutorials/optimizing_ai_assistants.html": {
+      "title": "Optimizing AI Coding Assistants: Planning and Guidelines",
+      "description": "Learn to maximize AI assistant effectiveness through strategic planning, model-specific instructions, and deliberate development practices.",
+      "type": "tutorial",
+      "format": "comprehensive_guide",
+      "difficulty": "intermediate",
+      "estimated_read_time": "15-20 minutes",
+      "primary_topics": [
+        "ai-assistant-optimization",
+        "development-planning",
+        "ai-guidance",
+        "coding-best-practices"
+      ],
+      "secondary_topics": [
+        "github-copilot",
+        "claude-optimization",
+        "reuse-strategies",
+        "model-specific-instructions",
+        "development-workflow"
+      ],
+      "target_audience": [
+        "developers",
+        "senior-developers",
+        "team-leads",
+        "ai-practitioners"
+      ],
+      "learning_objectives": [
+        "optimize_ai_assistant_performance",
+        "implement_planning_frameworks",
+        "create_model_specific_guidelines",
+        "prioritize_code_reuse",
+        "establish_consistent_development_practices"
+      ]
     }
   },
   "relationships": {
@@ -300,6 +334,11 @@
         "posts/junior_programmers_ai.html",
         "tutorials/vibe_code.html",
         "posts/ai_fixer.html"
+      ],
+      "ai_development_optimization_track": [
+        "tutorials/prompt_engineering.html",
+        "tutorials/optimizing_ai_assistants.html",
+        "posts/ai_engineering_fundamentals.html"
       ]
     },
     "conceptual_relationships": {
@@ -310,6 +349,10 @@
         },
         {
           "theory": "tutorials/prompt_engineering.html",
+          "practice": "tutorials/vibe_code.html"
+        },
+        {
+          "theory": "tutorials/optimizing_ai_assistants.html",
           "practice": "tutorials/vibe_code.html"
         }
       ],
@@ -338,6 +381,7 @@
       "developers": [
         "tutorials/prompt_engineering.html",
         "tutorials/vibe_code.html",
+        "tutorials/optimizing_ai_assistants.html",
         "posts/junior_programmers_ai.html",
         "posts/ai_fixer.html"
       ],
