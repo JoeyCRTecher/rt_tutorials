@@ -1,2 +1,5 @@
 # Cursor configuration
-.cursorrules 
+.cursorrules
+
+# Environment variables
+.env 
