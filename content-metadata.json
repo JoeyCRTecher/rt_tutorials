@@ -312,6 +312,36 @@
         "create_personal_ai_config",
         "level_up_vibe_coding_skills"
       ]
+    },
+    "tutorials/ai_coding_agents_keep_mojo.html": {
+      "title": "How to Use AI Coding Agents and Keep Your Mojo",
+      "description": "Practical rules to leverage AI coding agents without accruing mental technical debt.",
+      "type": "tutorial",
+      "format": "principles_guide",
+      "difficulty": "beginner_to_intermediate",
+      "estimated_read_time": "8-12 minutes",
+      "primary_topics": [
+        "ai-assisted-coding",
+        "developer-mindset",
+        "mental-technical-debt",
+        "best-practices"
+      ],
+      "secondary_topics": [
+        "learning-strategies",
+        "code-review",
+        "context-awareness"
+      ],
+      "target_audience": [
+        "developers",
+        "ai-enthusiasts",
+        "team-leads",
+        "students"
+      ],
+      "learning_objectives": [
+        "avoid_mental_tech_debt",
+        "balance_build_and_learn_modes",
+        "apply_context_aware_ai_use"
+      ]
     }
   },
   "relationships": {
@@ -337,6 +367,11 @@
         "tutorials/prompt_engineering.html",
         "tutorials/optimizing_ai_assistants.html",
         "posts/ai_engineering_fundamentals.html"
+      ],
+      "ai_mindset_and_practice_track": [
+        "tutorials/ai_coding_agents_keep_mojo.html",
+        "tutorials/prompt_engineering.html",
+        "tutorials/vibe_code.html"
       ]
     },
     "conceptual_relationships": {
@@ -380,7 +415,8 @@
         "tutorials/prompt_engineering.html",
         "tutorials/vibe_code.html",
         "tutorials/optimizing_ai_assistants.html",
-        "posts/junior_programmers_ai.html",
+  "posts/junior_programmers_ai.html",
+  "tutorials/ai_coding_agents_keep_mojo.html",
         "posts/ai_fixer.html"
       ],
       "ai_practitioners": [

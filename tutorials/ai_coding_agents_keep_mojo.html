@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Use AI Coding Agents and Keep Your Mojo</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32  32'><rect width='32' height='32' rx='6' fill='%23000'/><rect x='2' y='2' width='28' height='28' rx='4' fill='%2326d07c'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='14' font-weight='bold' fill='%23000'>RT</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='30' fill='%23000'/><rect x='10' y='10' width='160' height='160' rx='20' fill='%2326d07c'/><text x='90' y='120' text-anchor='middle' font-family='system-ui,sans-serif' font-size='80' font-weight='bold' fill='%23000'>RT</text></svg>">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to Use AI Coding Agents and Keep Your Mojo" />
+    <meta property="og:description" content="Practical rules to leverage AI coding agents without accruing mental technical debt." />
+    <meta property="og:site_name" content="RT Tutorials" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to Use AI Coding Agents and Keep Your Mojo" />
+    <meta name="twitter:description" content="Practical rules to leverage AI coding agents without accruing mental technical debt." />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- Tailwind (utility classes used across the site) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rt-green': '#26d07c',
+                        'rt-green-dark': '#1fa866',
+                        'rt-green-light': 'rgba(38, 208, 124, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white min-h-screen">
+    <!-- Navigation Header -->
+    <nav class="glass-effect fixed top-0 left-0 right-0 z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity">ReadyAI Tutorials</a>
+            <div class="flex space-x-6 text-sm">
+                <a href="../index.html#tutorials" class="hover:text-rt-green transition-colors">Tutorials</a>
+                <a href="../index.html#posts" class="hover:text-rt-green transition-colors">Posts</a>
+                <a href="../index.html#about" class="hover:text-rt-green transition-colors">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-20">
+        <header>
+            <h1>How to Use AI Coding Agents and Keep Your Mojo</h1>
+            <p><strong>Leverage AI without losing understanding, ownership, or confidence.</strong></p>
+        </header>
+
+        <main>
+            <!-- Optional quick TOC -->
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#tool-not-shortcut">1. AI as a Tool, Not a Shortcut</a></li>
+                    <li><a href="#mental-tech-debt">2. Mental Tech Debt = Code You Can’t Explain</a></li>
+                    <li><a href="#layers">3. Learning One Layer Deeper</a></li>
+                    <li><a href="#modes">4. Balancing Build Mode and Learn Mode</a></li>
+                    <li><a href="#context-aware">5. Context-Aware Use</a></li>
+                    <li><a href="#rule-of-thumb">My Rule of Thumb</a></li>
+                    <li><a href="#sources">Sources</a></li>
+                </ul>
+            </div>
+
+            <section id="intro">
+                <p>In today’s AI-augmented development landscape, it's tempting to treat generative models as magic bullets. But doing so risks accruing <strong>mental technical debt</strong>. This happens when building systems I don’t fully understand or feel ownership over.</p>
+                <p>Here’s how I'm trying to move forward so I can leverage the best support AI can provide while also keeping my skills sharp.</p>
+            </section>
+
+            <section id="tool-not-shortcut">
+                <h2>1. <strong>AI as a Tool, Not a Shortcut</strong></h2>
+                <p>From the <a href="https://newsletter.pragmaticengineer.com/p/cursor-makes-developers-less-effective" target="_blank" rel="noopener">Pragmatic Engineer Newsletter</a>:</p>
+                <blockquote>
+                    LLMs can feel like magic incantations, leading me to spend too long tweaking prompts instead of solving problems. A better approach: timebox AI use. Once the timebox expires, do it myself.
+                </blockquote>
+                <p><strong>Bonus:</strong> keep a record of hard tasks to re‑test when new models are released.</p>
+            </section>
+
+            <section id="mental-tech-debt">
+                <h2>2. <strong>Mental Tech Debt = Code You Can’t Explain</strong></h2>
+                <p>Here's what I'm thinking:</p>
+                <blockquote>
+                    <strong>Only ask AI to do what you know how to do, or… let AI blaze the trail—but understand what it’s done before accepting the PR.</strong>
+                </blockquote>
+                <p>Mental tech debt happens when I merge code I can't critique or maintain. If I can’t explain it, I should expect it to cause trouble later.</p>
+            </section>
+
+            <section id="layers">
+                <h2>3. <strong>Learning One Layer Deeper</strong></h2>
+                <p>To make the above rule practical:</p>
+                <ul>
+                    <li><strong>Layer 0</strong>: This is the code I’m committing and it must be fully understood.</li>
+                    <li><strong>Layer 1</strong>: Dependencies or abstractions. These should be intelligible, even if not fully internalised.</li>
+                    <li><strong>Layer 2+</strong>: Lower-level primitives. I need only be aware of these.</li>
+                </ul>
+            </section>
+
+            <section id="modes">
+                <h2>4. <strong>Balancing Build Mode and Learn Mode</strong></h2>
+                <p>I'm thinking of dividing my usage into Build and Learn modes.</p>
+
+                <h3>Build Mode</h3>
+                <ul>
+                    <li>This is where I am prototyping and trying to get something working quickly. I'll likely throw this away later.</li>
+                    <li>Or, I am building to deploy. In which case, I'll work in small pieces with the AI.</li>
+                </ul>
+
+                <h3>Learn Mode</h3>
+                <ul>
+                    <li>Here, I use the AI to understand. The aim isn't to ship but rather to use AI as a study buddy.</li>
+                    <li>I will mainly be doing much of the coding by hand.</li>
+                </ul>
+
+                <p>Here are some smells that tell me I'm going too far in either direction:</p>
+                <div style="overflow-x:auto">
+                    <table style="width:100%; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th style="text-align:left; padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Over-Reliance on AI (Build Mode)</th>
+                                <th style="text-align:left; padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Over-Resistance to AI (Learn Mode)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06);">Can't explain AI code</td>
+                                <td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06);">Avoids AI even for boilerplate</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06);">Fear of debugging AI code</td>
+                                <td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06);">Reinvents the wheel</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.5rem;">Skips reading AI code</td>
+                                <td style="padding: 0.5rem;">Delays prototypes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="context-aware">
+                <h2>5. <strong>Context-Aware Use</strong></h2>
+                <p>From <a href="https://www.youtube.com/watch?v=tbDDYKRFjhk" target="_blank" rel="noopener">a study presented on AI Engineer</a>:</p>
+                <blockquote>
+                    “AI effectiveness depends on the context: project maturity, language popularity, task complexity, codebase size, and context window.”
+                </blockquote>
+                <ul>
+                    <li><strong>Mature, complex codebases</strong> → AI struggles; lean on manual review.</li>
+                    <li><strong>Popular languages/patterns</strong> → AI more reliable; trust but also understand the consequences one layer deeper.</li>
+                    <li><strong>High complexity tasks</strong> → Use AI for prototyping, then validate in parts before shipping.</li>
+                </ul>
+            </section>
+
+            <section id="rule-of-thumb">
+                <h2>My Rule of Thumb</h2>
+                <p><strong>If I can't verify it or explain it, I’m not merging it.</strong></p>
+            </section>
+
+            <section id="sources">
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://newsletter.pragmaticengineer.com/p/cursor-makes-developers-less-effective" target="_blank" rel="noopener">Pragmatic Engineer Newsletter: Cursor makes developers less effective</a></li>
+                    <li><a href="https://news.ycombinator.com/item?id=43444058" target="_blank" rel="noopener">Hacker News discussion on AI and developer learning</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=tbDDYKRFjhk" target="_blank" rel="noopener">YouTube talk on the predictors AI assistant effectiveness</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- Related Content Section -->
+        <section class="max-w-1000px mx-auto px-6 py-8 mb-8">
+            <div class="glass-effect rounded-xl p-8">
+                <h2 style="color: #26d07c; margin-bottom: 1.5rem; font-size: 1.6rem;">🔗 Related Content</h2>
+                <div style="display: grid; gap: 1rem;">
+                    <a href="../tutorials/optimizing_ai_assistants.html" style="display: block; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(38, 208, 124, 0.2); border-radius: 10px; padding: 1.5rem; text-decoration: none; transition: all 0.3s ease;">
+                        <h3 style="color: #26d07c; margin-bottom: 0.5rem; font-size: 1.2rem;">Optimizing AI Coding Assistants</h3>
+                        <p style="color: #ccc; margin: 0;">Planning, reuse, and model-specific instructions to get better results.</p>
+                    </a>
+                    <a href="../tutorials/prompt_engineering.html" style="display: block; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(38, 208, 124, 0.2); border-radius: 10px; padding: 1.5rem; text-decoration: none; transition: all 0.3s ease;">
+                        <h3 style="color: #26d07c; margin-bottom: 0.5rem; font-size: 1.2rem;">The Complete Guide to Prompt Engineering</h3>
+                        <p style="color: #ccc; margin: 0;">Core techniques for getting the most from LLMs.</p>
+                    </a>
+                    <a href="../posts/ai_engineering_fundamentals.html" style="display: block; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(38, 208, 124, 0.2); border-radius: 10px; padding: 1.5rem; text-decoration: none; transition: all 0.3s ease;">
+                        <h3 style="color: #26d07c; margin-bottom: 0.5rem; font-size: 1.2rem;">AI Engineering Fundamentals</h3>
+                        <p style="color: #ccc; margin: 0;">Principles for building reliable AI systems in production.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
